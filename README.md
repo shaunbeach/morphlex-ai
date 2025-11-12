@@ -2,7 +2,7 @@
 
 > **The AI Migration Engineer** - Autonomous codebase migrations with semantic understanding and deterministic execution
 
-Morphlex AI is the ultimate AI-powered platform for automating tedious code migrations and cloud provisioning. It fuses the semantic understanding of Google Gemini with the deterministic power of metaprogramming to deliver safe, tested, and complete migrations.
+Morphlex AI is an AI-powered platform for automating tedious code migrations and cloud provisioning. It fuses the semantic understanding of Google Gemini with the deterministic power of metaprogramming to deliver safe, tested, and complete migrations.
 
 ![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini%20AI-4285F4?style=for-the-badge)
 ![Hackathon](https://img.shields.io/badge/Built%20at-Vibe%20Code%20SF-FF6B35?style=for-the-badge)
@@ -377,8 +377,6 @@ MIT License - see [LICENSE](./LICENSE) for details.
 ---
 
 <div align="center">
-
-**Built with ❤️ at [Your Company]**
 
 [Website](https://morphlex.ai) • [Documentation](https://docs.morphlex.ai) • [Discord](https://discord.gg/morphlex)
 
