@@ -1,0 +1,42 @@
+{
+  "name": "morphlex-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Morphlex AI - The AI Migration Engineer. Autonomous codebase migrations with semantic understanding and deterministic execution",
+  "scripts": {
+    "dev": "concurrently \"pnpm server:dev\" \"pnpm hands:watch\" \"pnpm brain:dev\"",
+    "dev:preview": "concurrently \"pnpm server:dev\" \"pnpm brain:dev\"",
+    "dev:full": "concurrently \"pnpm server:dev\" \"pnpm hands:watch\" \"pnpm brain:dev\"",
+    "brain:dev": "pnpm --filter brain dev",
+    "server:dev": "pnpm --filter server dev",
+    "server:start": "pnpm --filter server start",
+    "hands:watch": "nodemon --watch 'packages/hands/src' --ext 'ts' --exec 'pnpm --filter hands compile'",
+    "hands:build": "pnpm --filter hands build",
+    "build": "pnpm --filter types build && pnpm --filter server build && pnpm --filter hands build && pnpm --filter brain build",
+    "install-all": "pnpm install",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check"
+  },
+  "keywords": [
+    "ai",
+    "migration",
+    "codemod",
+    "jscodeshift",
+    "gemini",
+    "vscode",
+    "automation",
+    "refactoring"
+  ],
+  "author": "Morphlex Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

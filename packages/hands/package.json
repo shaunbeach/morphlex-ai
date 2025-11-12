@@ -1,0 +1,55 @@
+{
+  "name": "hands",
+  "displayName": "Morphlex AI",
+  "description": "VS Code extension - The local execution engine for Morphlex AI",
+  "version": "1.0.0",
+  "publisher": "morphlex",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "files": [
+    "out"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "morphlex.startServer",
+        "title": "Morphlex: Start Server"
+      },
+      {
+        "command": "morphlex.stopServer",
+        "title": "Morphlex: Stop Server"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "clean": "rm -rf out *.tsbuildinfo",
+    "lint": "eslint src --ext ts",
+    "build": "pnpm compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.88.0",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.4.5",
+    "types": "workspace:*",
+    "ws": "^8.17.0"
+  }
+}

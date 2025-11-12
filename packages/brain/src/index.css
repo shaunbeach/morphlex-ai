@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-morphlex-darker text-gray-200 font-sans antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-morphlex-dark p-6 rounded-lg shadow-lg border border-gray-800;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn bg-morphlex-accent text-white hover:bg-cyan-500 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-700 text-gray-200 hover:bg-gray-600 active:scale-95;
+  }
+
+  .btn-success {
+    @apply btn bg-morphlex-success text-white hover:bg-green-500 active:scale-95;
+  }
+
+  .btn-danger {
+    @apply btn bg-morphlex-error text-white hover:bg-red-500 active:scale-95;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-morphlex-accent focus:border-transparent transition-all;
+  }
+
+  .tab {
+    @apply px-6 py-3 font-medium transition-all cursor-pointer border-b-2;
+  }
+
+  .tab-inactive {
+    @apply tab border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-600;
+  }
+
+  .tab-active {
+    @apply tab border-morphlex-accent text-morphlex-accent;
+  }
+
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .status-pending {
+    @apply status-badge bg-gray-700 text-gray-300;
+  }
+
+  .status-running {
+    @apply status-badge bg-blue-900 text-blue-300 animate-pulse;
+  }
+
+  .status-success {
+    @apply status-badge bg-green-900 text-green-300;
+  }
+
+  .status-failed {
+    @apply status-badge bg-red-900 text-red-300;
+  }
+
+  .log-line {
+    @apply font-mono text-sm py-1 px-2 rounded;
+  }
+
+  .log-info {
+    @apply log-line text-blue-300;
+  }
+
+  .log-success {
+    @apply log-line text-green-300;
+  }
+
+  .log-warning {
+    @apply log-line text-yellow-300;
+  }
+
+  .log-error {
+    @apply log-line text-red-300;
+  }
+
+  .log-stdout {
+    @apply log-line text-gray-300;
+  }
+
+  .log-stderr {
+    @apply log-line text-orange-300;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
